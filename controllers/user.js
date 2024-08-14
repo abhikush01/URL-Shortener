@@ -9,7 +9,14 @@ async function handleUserSignup(req, res) {
     email,
     password,
   });
-  return res.redirect("/");
+  const u = await user.findOne({ email, password });
+  if (u) {
+    createToken(res, u);
+    res.locals.cookies = res.cookies;
+    return res.redirect("/home");
+  }
+  // If user creation or lookup fails, redirect to signup with an error
+  return res.redirect("/signup?error=Signup failed");
 }
 
 async function handleUserLogin(req, res) {
@@ -18,9 +25,18 @@ async function handleUserLogin(req, res) {
   if (!u) return res.render("login", { error: "Ivalid Username Or password" });
   // const sessionId = uuidv4();
   // setUser(sessionId, u);
-  const token = setUser(u);
-  res.cookie("token", token);
-  return res.redirect("/");
+  createToken(res, u);
+  res.locals.cookies = res.cookies;
+  return res.redirect("/home");
 }
+
+const createToken = (res, user) => {
+  try {
+    const token = setUser(user);
+    res.cookie("token", token);
+  } catch (error) {
+    console.error("Token creation error:", error);
+  }
+};
 
 module.exports = { handleUserSignup, handleUserLogin };

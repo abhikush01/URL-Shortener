@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL Shortener</title>
+    <link href="/style/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-indigo-600 text-white">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <a href="/" class="text-2xl font-bold z-10">URL Shortener</a>
+        <nav>
+          <a
+            href="/signup"
+            class="px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-400 text-white relative z-10"
+            >Sign Up</a
+          >
+          <a
+            href="/login"
+            class="ml-4 px-4 py-2 rounded-md bg-white text-indigo-600 hover:bg-indigo-100 relative z-10"
+            >Login</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div>
+      <main>
+        <!-- HERO SECTION -->
+        <div class="container mx-auto my-10 px-4">
+          <div class="relative isolate px-6 lg:px-8">
+            <div
+              class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+              aria-hidden="true"
+            >
+              <div
+                class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="
+                  clip-path: polygon(
+                    74.1% 44.1%,
+                    100% 61.6%,
+                    97.5% 26.9%,
+                    85.5% 0.1%,
+                    80.7% 2%,
+                    72.5% 32.5%,
+                    60.2% 62.4%,
+                    52.4% 68.1%,
+                    47.5% 58.3%,
+                    45.2% 34.5%,
+                    27.5% 76.7%,
+                    0.1% 64.9%,
+                    17.9% 100%,
+                    27.6% 76.8%,
+                    76.1% 97.7%,
+                    74.1% 44.1%
+                  );
+                "
+              ></div>
+            </div>
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+              <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div
+                  class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                >
+                  How to Create Short URL
+                  <a href="#" class="font-semibold text-indigo-600"
+                    ><span class="absolute inset-0" aria-hidden="true"></span
+                    >Read more <span aria-hidden="true">&rarr;</span></a
+                  >
+                </div>
+              </div>
+              <div class="text-center">
+                <h1
+                  class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+                >
+                  Shorten Your URLs with Ease
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Easily shorten long URLs, track clicks, and manage links with
+                  our powerful URL shortener tool. Simplify your links and get
+                  insights on your URL usage.
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                  <a
+                    href="/signup"
+                    class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    >Get started</a
+                  >
+                  <a
+                    href="#"
+                    class="text-sm font-semibold leading-6 text-gray-900"
+                    >Learn more <span aria-hidden="true">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
+          <div class="container mx-auto my-10 px-4">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div class="text-center">
+                <h1
+                  class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+                >
+                  The most trusted <br />
+                  URL Shortener platform
+                </h1>
+
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Here are a few reasons why you should choose URL Shortener
+                </p>
+              </div>
+              <div
+                class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24"
+              >
+                <!-- Feature 1 -->
+                <div
+                  class="md:p-8 lg:p-14 flex flex-col justify-center items-center"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-purple-200 flex justify-center items-center"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="/icons/link.png"
+                      alt="Link Icon"
+                    />
+                  </div>
+                  <h3 class="mt-12 text-xl font-bold text-gray-900">
+                    Customizable Links
+                  </h3>
+                  <p class="mt-5 text-base text-gray-600">
+                    Personalize your shortened URLs with custom aliases for
+                    easier recall.
+                  </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                  class="md:p-8 lg:p-14 flex flex-col justify-center items-center"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-red-200 flex justify-center items-center"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="/icons/increasing.png"
+                      alt="Analytics Icon"
+                    />
+                  </div>
+                  <h3 class="mt-12 text-xl font-bold text-gray-900">
+                    Link Analytics
+                  </h3>
+                  <p class="mt-5 text-base text-gray-600">
+                    Track the number of clicks and analyze the performance of
+                    your links.
+                  </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                  class="md:p-8 lg:p-14 flex flex-col justify-center items-center"
+                >
+                  <div
+                    class="w-14 h-14 rounded-full bg-yellow-200 flex justify-center items-center"
+                  >
+                    <img
+                      class="w-6 h-6"
+                      src="/icons/network.png"
+                      alt="Network Icon"
+                    />
+                  </div>
+                  <h3 class="mt-12 text-xl font-bold text-gray-900">
+                    Easy Management
+                  </h3>
+                  <p class="mt-5 text-base text-gray-600">
+                    Manage and organize your shortened URLs from a user-friendly
+                    dashboard.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Info Section -->
+        <section class="pt-24 pb-32 bg-gray-200 overflow-hidden">
+          <div class="container mx-auto my-10 px-8">
+            <div class="container px-4 mx-auto">
+              <div>
+                <h2
+                  class="mb-28 text-6xl md:text-7xl font-bold font-heading tracking-px-n leading-tight md:max-w-lg"
+                >
+                  We make things easy for you.
+                </h2>
+              </div>
+              <div class="flex flex-wrap -m-8">
+                <div class="w-full md:w-1/2 lg:w-1/4 p-8">
+                  <div class="flex flex-wrap items-center mb-7 -m-2">
+                    <div class="w-auto p-2">
+                      <div
+                        class="relative w-14 h-14 text-2xl font-bold font-heading bg-indigo-100 rounded-full"
+                      >
+                        <span
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                          >1</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex-1 p-2">
+                      <div class="w-full h-px bg-black"></div>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-semibold leading-normal md:max-w-xs">
+                    Paste your long URL into our tool.
+                  </h3>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 p-8">
+                  <div class="flex flex-wrap items-center mb-7 -m-2">
+                    <div class="w-auto p-2">
+                      <div
+                        class="relative w-14 h-14 text-2xl text-white font-bold bg-indigo-600 rounded-full"
+                      >
+                        <img
+                          class="absolute top-0 left-0"
+                          src="flaro-assets/images/how-it-works/gradient.svg"
+                          alt=""
+                        />
+                        <span
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                          >2</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex-1 p-2">
+                      <div class="w-full h-px bg-black"></div>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-semibold leading-normal md:max-w-xs">
+                    Customize your short link (optional).
+                  </h3>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 p-8">
+                  <div class="flex flex-wrap items-center mb-7 -m-2">
+                    <div class="w-auto p-2">
+                      <div
+                        class="relative w-14 h-14 text-2xl font-bold font-heading bg-indigo-100 rounded-full"
+                      >
+                        <span
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                          >3</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex-1 p-2">
+                      <div class="w-full h-px bg-black"></div>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-semibold leading-normal md:max-w-xs">
+                    Click "Shorten" and get your new short URL instantly.
+                  </h3>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 p-8">
+                  <div class="flex flex-wrap items-center mb-7 -m-2">
+                    <div class="w-auto p-2">
+                      <div
+                        class="relative w-14 h-14 text-2xl font-bold font-heading bg-indigo-100 rounded-full"
+                      >
+                        <span
+                          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                          >4</span
+                        >
+                      </div>
+                    </div>
+                    <div class="flex-1 p-2">
+                      <div class="w-full h-px bg-black"></div>
+                    </div>
+                  </div>
+                  <h3 class="text-xl font-semibold leading-normal md:max-w-xs">
+                    Track and manage your links through your dashboard.
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Signup Section -->
+        <section id="new-features" class="py-8 bg-white sm:py-10 lg:py-16">
+          <div class="container mx-auto my-10 px-4">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div>
+                <h1
+                  class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+                >
+                  Sign Up for Free
+                </h1>
+
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Join us today to start shortening your URLs and accessing all
+                  our features. It's free to sign up!
+                </p>
+              </div>
+              <div class="mt-6">
+                <a
+                  href="/signup"
+                  class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700"
+                  >Sign Up Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <%- include('footer') -%>
+  </body>
+</html>

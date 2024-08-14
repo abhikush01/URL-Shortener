@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
+    <link href="/style/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <h1>Login</h1>
-    <form method="POST" action="/user/login">
-      <label>Email</label>
-      <input type="email" required name="email" />
-      <label>Password</label>
-      <input type="password" required name="password" />
-      <button type="submit">Login</button>
-    </form>
+  <body class="flex flex-col min-h-screen bg-gray-100">
+    <!-- Navigation -->
+    <%- include('header'); -%>
+
+    <!-- Login Form -->
+    <div class="flex-grow flex items-center justify-center bg-white">
+      <div class="max-w-md w-full bg-white p-8 rounded-md shadow-md">
+        <h2 class="text-3xl font-bold text-center text-indigo-600 mb-6">
+          Sign In to Your Account
+        </h2>
+        <form class="space-y-6" action="/user/login" method="POST">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email Address</label
+            >
+            <div class="mt-1">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              for="password"
+              class="block text-sm font-medium text-gray-700"
+              >Password</label
+            >
+            <div class="mt-1">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-2"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <p class="mt-6 text-center text-sm text-gray-600">
+          Don't have an account?
+          <a
+            href="/signup"
+            class="font-medium text-indigo-600 hover:text-indigo-500"
+            >Sign Up</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('footer') -%>
   </body>
 </html>
